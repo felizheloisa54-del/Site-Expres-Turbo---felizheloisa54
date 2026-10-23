@@ -1,0 +1,40 @@
+import { SaaSUser } from '../types';
+
+export const initialSaaSUsers: SaaSUser[] = [
+  {
+    id: 'user-admin',
+    name: 'Administrador Master',
+    email: 'admin@siteexpress.pro',
+    password: 'admin',
+    role: 'admin',
+    status: 'active',
+    createdAt: '2025-11-01T10:00:00Z',
+    planName: 'Dono / Super Admin',
+    maxSites: 9999,
+    phone: '5511999998888',
+  },
+  {
+    id: 'user-creator-1',
+    name: 'Lucas Mendes (Agência Apex Web)',
+    email: 'lucas@apexweb.com.br',
+    password: '123',
+    role: 'creator',
+    status: 'active',
+    createdAt: '2026-01-10T14:30:00Z',
+    planName: 'Plano Agência Pro (50 Sites)',
+    maxSites: 50,
+    phone: '5543998811223',
+  },
+  {
+    id: 'user-creator-2',
+    name: 'Carla Silveira (Studio Web Local)',
+    email: 'carla@growthlocal.com.br',
+    password: '123',
+    role: 'creator',
+    status: 'active',
+    createdAt: '2026-02-05T09:15:00Z',
+    planName: 'Plano Starter (10 Sites)',
+    maxSites: 10,
+    phone: '5562981122334',
+  },
+];

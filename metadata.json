@@ -1,0 +1,6 @@
+{
+  "name": "Site Express Studio Pro",
+  "description": "Plataforma SaaS para criação e customização instantânea de landing pages de alta conversão para negócios locais a partir do Google Meu Negócio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

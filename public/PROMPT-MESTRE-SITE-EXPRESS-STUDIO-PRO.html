@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROMPT MESTRE - Site Express Studio Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-4 sm:p-8 lg:p-12 selection:bg-blue-600 selection:text-white">
+  <div class="max-w-4xl mx-auto space-y-8">
+    
+    <!-- Top Action Header -->
+    <header class="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-2xl">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-3">
+          ⚡ Engenharia & Design de Software
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-white">PROMPT MESTRE: Site Express Studio Pro</h1>
+        <p class="text-slate-400 text-sm mt-1">Instrução completa para replicação 100% fiel em qualquer Inteligência Artificial</p>
+      </div>
+      <div class="flex items-center gap-2.5 w-full sm:w-auto">
+        <button onclick="copiarPrompt()" id="btnCopiar" class="flex-1 sm:flex-initial px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer">
+          📋 Copiar Prompt Mestre
+        </button>
+        <a href="/public/PROMPT-MESTRE-SITE-EXPRESS-STUDIO-PRO.md" download="PROMPT-MESTRE-SITE-EXPRESS-STUDIO-PRO.md" class="px-4 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+          ↓ Baixar .MD
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6">
+      <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-6">
+        
+        <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/25 text-amber-300 text-sm">
+          💡 <strong>Como usar:</strong> Copie todo o conteúdo abaixo e envie diretamente para o ChatGPT, Claude, Cursor ou qualquer outra inteligência artificial com a instrução de gerar o código da aplicação.
+        </div>
+
+        <pre id="promptText" class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-xs sm:text-sm text-slate-200 overflow-x-auto whitespace-pre-wrap leading-6">Você é um Engenheiro de Software Full-Stack Principal e Lead Product Designer especializado em plataformas SaaS de alta conversão, arquitetura React/TypeScript, back-end Node.js/Express, e padrões visuais do Apple iOS Human Interface Guidelines.
+Sua missão é criar, do zero e de forma 100% funcional, a aplicação completa "Site Express Studio Pro". 
+Não use códigos resumidos, não coloque comentários como '// adicione o restante aqui', não crie placeholders incompletos e não omita detalhes arquiteturais. Siga todas as especificações e contratos técnicos abaixo.
+
+---
+
+### 1. VISÃO GERAL, PROPOSTA DE VALOR E REGRAS DE NEGÓCIO
+
+1.1 O que é o Site Express Studio Pro?
+O Site Express Studio Pro é uma plataforma SaaS B2B completa desenvolvida para criadores de sites freelancers, agências digitais e gestores de tráfego locais no Brasil. A ferramenta permite importar a ficha oficial de qualquer empresa brasileira cadastrada no Google Meu Negócio (Google Places API) ou cadastrá-la manualmente, gerando em menos de 3 minutos uma Landing Page Institucional de Altíssima Conversão adaptada a nichos como:
+- Clínicas Médicas e Consultórios Odontológicos
+- Gastronomia, Bares e Pizzarias
+- Escritórios de Advocacia e Contabilidade
+- Serviços Automotivos, Estética e Varejo Local
+
+1.2 Perfis de Usuário & Controle de Acesso (RBAC)
+O sistema possui 3 personas rigorosamente demarcadas:
+1. Dono da Plataforma (Super Admin / Proprietário do SaaS):
+   - Vende as assinaturas do software para os criadores de sites (ex: R$ 97/mês no plano Start, R$ 197/mês no Pro, R$ 297/mês no Agência).
+   - Acessa o Painel do Dono para criar novos usuários, alterar planos, definir cota máxima de sites (ex: 5, 20 ou 100 sites) e bloquear/desbloquear assinantes por inadimplência.
+2. Criador de Sites (Assinante / Agência / Freelancer):
+   - Assinante que utiliza a ferramenta para construir e gerir os sites dos seus clientes locais.
+   - Tem acesso à Tela 2 (+ Novo Site & Buscador) e à Tela 3 (Studio Pro).
+   - Gerencia a carteira de clientes, visualiza status financeiro (dias até a anuidade vencer), entra em contato direto com o cliente via WhatsApp com 1 clique e aciona o Killswitch Anti-Inadimplência.
+3. Cliente Final (Dono da Empresa Local - ex: Dr. Roberto / Pizzaria Bella):
+   - NÃO POSSUI LOGIN NEM ACESSO AO SISTEMA.
+   - Recebe apenas a URL oficial publicada (ex: https://app.com/?site=clinica-sorriso) ou o pacote HTML exportado.
+   - Todos os botões do site gerado apontam para o WhatsApp oficial dele com mensagem personalizada pré-preenchida.
+
+---
+
+### 2. ARQUITETURA DE NAVEGAÇÃO EM 3 TELAS DEDICADAS
+
+A experiência do usuário é estruturada em 3 telas bem separadas, impedindo a sobrecarga cognitiva. No topo de todas as telas, existe um Seletor Global de 3 Telas ([🌟 1. Vendas & Login] [🏢 2. + Novo Site & Buscador] [⚡ 3. Studio Pro]) que permite navegar instantaneamente entre elas:
+
+TELA 1: PÁGINA DE VENDAS DE ALTA CONVERSÃO & PORTAL DE ACESSO (AuthScreen)
+- Coluna Esquerda:
+  - Tagline: "SaaS Exclusivo para Criadores de Sites & Agências".
+  - Título: "Crie Sites Profissionais para Empresas Locais em 10 Minutos com Apenas Alguns Cliques".
+  - Gatilhos mentais: Velocidade extrema (3 minutos via Google Places), Lucro e recorrência anual (R$ 800 a R$ 2.500 criação + anuidade), Proteção de faturamento com Killswitch.
+  - Carrossel de Demonstrações Reais: Modelos de clínicas com 4.9★, gastronomia, estética.
+  - Calculadora de Ganhos: Simulação de receita por quantidade de clientes atendidos.
+- Coluna Direita:
+  - Card em Liquid Glass com abas de login: Criador de Sites vs Super Admin.
+  - Campos de E-mail e Senha.
+  - Botões de Atalho Rápido para teste imediato com 1 clique: Super Admin (Dono), Lucas Mendes (Agência Pro) e Carla Dias (Freelancer Start).
+
+TELA 2: NOVO SITE, BUSCADOR GOOGLE & PAINEL OPERACIONAL (DashboardScreen)
+- Top Bar com Seletor Global de Telas, indicador de sites criados, chave do Google Places e logout.
+- Segmented Control estilo iOS com 3 abas:
+  - Aba 1 (+ Novo Site): Buscador Google Meu Negócio no centro da tela com autocomplete em tempo real, além de botão para Cadastro Manual.
+  - Aba 2 (Meus Clientes): Gestão da carteira com Killswitch de 1 clique (Ativo / Suspenso), contador regressivo de dias até anuidade vencer, botão de WhatsApp direto e botão "Editar no Studio".
+  - Aba 3 (Painel do Dono - Apenas Super Admin): Listagem e criação de assinantes, controle de limites e bloqueio por inadimplência.
+
+TELA 3: STUDIO PRO DE CRIAÇÃO E CUSTOMIZAÇÃO (StudioScreen)
+- Cabeçalho em Dois Níveis (Two-Tier):
+  - Nível 1 (Barra Preta Superior): Logo oficial, Seletor Global de 3 Telas, "+ Novo Site", "Meus Clientes ({qtd})" e alternador de tema Claro/Escuro.
+  - Nível 2 (Barra de Ferramentas): Botão "← Meus Clientes", nome do cliente com badge verde [🟢 Ativo no ar], seletor de Viewport (Computador, Tablet, Celular 390px), dropdown de Paletas, dropdown de Tipografia, indicador [✔ Salvo], [↗ Abrir] e o botão preto de destaque [↓ Baixar Site Pronto].
+- Painel Lateral Esquerdo (Sidebar):
+  - 9 Seções Modulares com botões ↑ e ↓ para reordenar e interruptores iOS toggle:
+    1. Hero Editorial / Fotográfico (layouts: Caixa, Fundo Total, Centralizado, Foto Esquerda)
+    2. Bento de Especialidades
+    3. Como Funciona (3 etapas)
+    4. Promoção com Cronômetro regressivo
+    5. Autoridade & Números
+    6. Vídeo Institucional (player com YouTube / Vimeo / MP4)
+    7. Avaliações do Google (filtro de 4 e 5 estrelas)
+    8. Localização & Rotas (mapa e horários)
+    9. Dúvidas Frequentes (FAQ accordion)
+  - Produtos / Catálogo: Sem preços forçados, com botão para agendamento ou pedido direto no WhatsApp.
+- Canvas Central:
+  - Na visualização Celular, renderiza a moldura física de iPhone 390px x 844px com Dynamic Island e barra de WhatsApp fixada no rodapé da tela do aparelho.
+
+---
+
+### 3. GERADOR DE LOGOMARCAS SVG (3 ESTILOS)
+Caso a empresa não tenha logo no Google Places, gera e permite escolher:
+1. Monograma Geométrico (iniciais elegantes com gradiente).
+2. Selo de Excelência Dourado (brasão com estrelas e louros).
+3. Brasão Minimalista (escudo com ícone do nicho).
+
+---
+
+### 4. BACK-END NODE.JS / EXPRESS E APIS
+- Google Places API Dual:
+  - Rota POST /api/places/search com tentativa primária na Places API (New) e fallback automático para Legacy Text Search.
+  - Rota POST /api/places/test-key com diagnóstico completo de erros (permissão, IP/referrer ou faturamento).
+- Google Gemini AI: Integração via @google/genai (gemini-2.5-flash) para aprimoramento de copy e SEO.
+
+---
+
+### 5. EXPORTAÇÃO E VERCEL
+- Exportação em index.html autossuficiente (zero dependências externas, Tailwind e SVG inline).
+- Pronto para arrastar na Vercel e publicar gratuitamente com HTTPS em 1 minuto.
+- Link oficial hospedado com Killswitch que exibe tela de suspensão elegante caso o cliente atrase o pagamento da agência.</pre>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    function copiarPrompt() {
+      const text = document.getElementById('promptText').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('btnCopiar');
+        btn.innerText = '✅ Prompt Copiado com Sucesso!';
+        btn.classList.remove('bg-blue-600');
+        btn.classList.add('bg-emerald-600');
+        setTimeout(() => {
+          btn.innerText = '📋 Copiar Prompt Mestre';
+          btn.classList.remove('bg-emerald-600');
+          btn.classList.add('bg-blue-600');
+        }, 3000);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRD - Site Express Studio Pro</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1d1d1f;
+      background: #f2f2f7;
+      margin: 0;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 56px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: #e8f2ff;
+      color: #007aff;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.2px;
+    }
+    h1 { font-size: 32px; color: #1c1c1e; margin: 0 0 8px 0; font-weight: 800; letter-spacing: -0.5px; }
+    .meta { font-size: 14px; color: #8e8e93; margin-bottom: 24px; }
+    h2 { font-size: 21px; color: #007aff; margin-top: 36px; margin-bottom: 14px; border-bottom: 1px solid #e5e5ea; padding-bottom: 8px; font-weight: 700; }
+    h3 { font-size: 16px; color: #1c1c1e; margin-top: 24px; margin-bottom: 8px; font-weight: 600; }
+    p, li { font-size: 15px; color: #3a3a3c; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13.5px; }
+    th, td { border: 1px solid #e5e5ea; padding: 12px 14px; text-align: left; }
+    th { background: #f2f2f7; font-weight: 700; color: #1c1c1e; }
+    code { background: #f2f2f7; padding: 3px 6px; border-radius: 6px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: #007aff; }
+    pre { background: #1c1c1e; color: #f5f5f7; padding: 18px; border-radius: 14px; overflow-x: auto; font-size: 13px; line-height: 1.5; }
+    .print-button {
+      background: #007aff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 24px;
+    }
+    .print-button:hover { background: #0062cc; }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { box-shadow: none; border: none; padding: 0; }
+      .print-button { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div>
+        <div class="badge"> Apple iOS Tokens &bull; PRD Aprovado</div>
+        <h1>Documento de Requisitos de Produto (PRD)</h1>
+        <div class="meta"><strong>Projeto:</strong> Site Express Studio Pro &bull; <strong>Versão:</strong> 1.0.0 &bull; <strong>Status:</strong> Aprovado para Engenharia</div>
+      </div>
+      <button class="print-button" onclick="window.print()">Imprimir / Salvar PDF</button>
+    </div>
+    
+    <hr style="border:0; border-top: 1px solid #e5e5ea; margin: 20px 0 32px 0;" />
+
+    <h2>1. Visão Geral e Propósito (Executive Summary)</h2>
+    <p>O <strong>Site Express Studio Pro</strong> é uma plataforma SaaS B2B "white-label" desenvolvida para agências digitais, freelancers e criadores de sites profissionais. O objetivo central da ferramenta é permitir a criação, customização e publicação de landing pages de altíssima conversão para comércios e prestadores de serviços locais em <strong>menos de 3 minutos</strong>, utilizando dados reais do Google Maps ou inserção manual rápida.</p>
+    <p>Diferente de construtores genéricos com interface visual carregada ou com "aspecto artificial de IA", o Site Express Studio Pro adota a filosofia do <strong>Apple iOS Design System</strong> (SF Pro, Liquid Glass, cantos squircle suaves, botões com feedback tátil e ergonomia fluida) e organiza a jornada em <strong>3 telas estritamente separadas e sem poluição</strong>.</p>
+
+    <h2>2. Personas e Matriz de Acesso</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Persona</th>
+          <th>Perfil</th>
+          <th>Objetivos Principais</th>
+          <th>Interface / Acesso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Dono da Plataforma (Super Admin)</strong></td>
+          <td>Proprietário do SaaS Site Express</td>
+          <td>Criar logins de assinantes, gerenciar cotas de sites (ex: 20 a 100 sites), monitorar inadimplência e revogar acessos de criadores.</td>
+          <td>Tela 1 (Login Admin) ➔ Tela 2 (Aba Exclusiva: Painel do Dono)</td>
+        </tr>
+        <tr>
+          <td><strong>Criador de Sites (Assinante / Agência)</strong></td>
+          <td>Designer, freelancer ou agência local</td>
+          <td>Importar dados de clientes em segundos, ajustar copy e paleta, adicionar logotipo e vídeo, e publicar ou exportar o site para o cliente.</td>
+          <td>Tela 1 (Login Assinante) ➔ Tela 2 (Dashboard / Gestão de Sites) ➔ Tela 3 (Studio de Edição)</td>
+        </tr>
+        <tr>
+          <td><strong>Cliente da Empresa Local (Dono do Negócio)</strong></td>
+          <td>Médico, dentista, dono de pizzaria, mecânico</td>
+          <td><strong>Não acessa o sistema de edição.</strong> Apenas usufrui da landing page no ar e recebe leads no seu WhatsApp. Contrata a agência criadora.</td>
+          <td>Visualizador da Landing Page Pública (<code>?site=slug</code> ou domínio próprio)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Arquitetura da Experiência em 3 Telas</h2>
+    <p>O produto elimina a sobrecarga cognitiva dividindo a operação em três momentos claros e lineares:</p>
+    <ul>
+      <li><strong>Tela 1: Autenticação Segura (AuthScreen):</strong> Fundo imersivo com efeito Apple Liquid Glass, logotipo refinado Site Express com insignia vetorial e suporte nativo ao tema Diurno/Noturno. Segmented control entre Criador e Super Admin, com atalhos de 1 clique para demonstrações rápidas.</li>
+      <li><strong>Tela 2: Dashboard Central & Hub Operacional (DashboardScreen):</strong> Top bar com plano, cota de sites, alternador Diurno/Noturno e logout. Segmented control nativo com abas: <em>Novo Site</em> (Google Places / Cadastro Manual), <em>Gestão de Sites</em> (Killswitch de 1 clique, dias de anuidade e link WhatsApp direto) e <em>Painel do Dono</em> (gestão de assinantes).</li>
+      <li><strong>Tela 3: Studio Pro de Edição Visual (StudioScreen):</strong> Barra superior ergonômica com botão "Voltar ao Dashboard", seletor de Viewport (Desktop 1200px, Tablet 768px e Mobile iPhone 390px fiel), botão Logo & Cores, layout switcher do hero e exportação.</li>
+    </ul>
+
+    <h2>4. Especificações do Design System (Apple iOS Tokens)</h2>
+    <p>A interface do Site Express Studio Pro obedece rigorosamente aos tokens oficiais do iOS:</p>
+    <ul>
+      <li><strong>Tipografia:</strong> Família <code>SF Pro, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif</code> com escala hierárquica clara (Large Title 34px, Title1 28px, Headline 17px, Body 17px, Footnote 13px).</li>
+      <li><strong>Cores Semânticas:</strong> <code>systemBlue</code> (#007AFF), <code>systemGreen</code> (#34C759), <code>systemOrange</code> (#FF9500), <code>systemRed</code> (#FF3B30), <code>systemBackground</code> (#FFFFFF / #F2F2F7 no modo claro; #000000 / #1C1C1E no modo escuro).</li>
+      <li><strong>Efeitos Liquid Glass:</strong> <code>backdrop-filter: blur(20px) saturate(190%)</code> com bordas translúcidas de 1px.</li>
+      <li><strong>Geometria Squircle:</strong> Raios suaves de 12px para botões e 20px para containers e modais.</li>
+      <li><strong>Touch Target:</strong> Área mínima de 44x44pt para qualquer interação.</li>
+    </ul>
+
+    <h2>5. Módulos Funcionais Detalhados</h2>
+    <h3>5.1 Importação Inteligente & Cadastro Manual</h3>
+    <p>Google Places Autocomplete com preenchimento instantâneo de dados comerciais, e Modal de Cadastro Manual para negócios recém-abertos que ainda não constam no Google Maps.</p>
+
+    <h3>5.2 Gestão de Clientes & Killswitch Operacional</h3>
+    <p>Permite suspender um site com 1 clique se o cliente atrasar a anuidade ou mensalidade. Quando suspenso, a URL pública apresenta aviso amigável de regularização. Atalho de WhatsApp direto com mensagem pré-formatada de cobrança ou atendimento.</p>
+
+    <h3>5.3 Logo Studio & Harmonização de Cores</h3>
+    <p>Upload de logotipo com remoção de fundo escuro/claro, além de gerador automático de 3 variações de logotipo profissional (Monograma, Tipográfico e Ícone), harmonização de paleta de cores e favicon vetorial SVG.</p>
+
+    <h3>5.4 Seção de Vídeo Institucional (Apple Media Player)</h3>
+    <p>Campo opcional para inserção de vídeo institucional via MP4 leve ou YouTube embed, emoldurado com cantos squircle e botão de Play com efeito de vidro líquido.</p>
+
+    <h2>6. Viabilidade Técnica: Vídeo por IA vs. Abordagem Recomendada</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Vídeo Gerado por IA</th>
+          <th>Vídeo Real do Cliente (Player Apple)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Custo</strong></td>
+          <td>Alto e cobrado por minuto (sem cota gratuita)</td>
+          <td>Zero custo (armazenamento próprio ou YouTube)</td>
+        </tr>
+        <tr>
+          <td><strong>Tempo de Resposta</strong></td>
+          <td>45s a 180s de processamento</td>
+          <td>Instantâneo</td>
+        </tr>
+        <tr>
+          <td><strong>Autenticidade</strong></td>
+          <td>Pessoas e clínicas fictícias</td>
+          <td>Mostra a equipe e fachada reais do negócio</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>7. Publicação e Exportação</h2>
+    <ul>
+      <li><strong>Publicação por Slug:</strong> <code>https://app-url/?site=slug</code> para visualização pública instantânea em tela cheia.</li>
+      <li><strong>HTML Standalone:</strong> Arquivo <code>index.html</code> único, com Tailwind embutido, pronto para Vercel, Netlify ou cPanel com 1 clique.</li>
+      <li><strong>Código ZIP:</strong> Pacote completo para desenvolvedores.</li>
+    </ul>
+  </div>
+</body>
+</html>

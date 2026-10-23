@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --font-ios: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --ios-system-blue: #007AFF;
+  --ios-system-green: #34C759;
+  --ios-system-orange: #FF9500;
+  --ios-system-red: #FF3B30;
+  --ios-bg-primary: #FFFFFF;
+  --ios-bg-secondary: #F2F2F7;
+  --ios-bg-tertiary: #FFFFFF;
+  --ios-label-primary: #000000;
+  --ios-label-secondary: #3C3C43;
+}
+
+.dark {
+  --ios-system-blue: #0A84FF;
+  --ios-system-green: #30D158;
+  --ios-system-orange: #FF9F0A;
+  --ios-system-red: #FF453A;
+  --ios-bg-primary: #000000;
+  --ios-bg-secondary: #1C1C1E;
+  --ios-bg-tertiary: #2C2C2E;
+  --ios-label-primary: #FFFFFF;
+  --ios-label-secondary: #EBEBF5;
+}
+
+body {
+  font-family: var(--font-ios);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apple Liquid Glass Effect */
+.ios-liquid-glass {
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.dark .ios-liquid-glass {
+  background-color: rgba(28, 28, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Apple Squircle Containers */
+.ios-squircle-button {
+  border-radius: 12px;
+  min-height: 44px;
+  min-width: 44px;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ios-squircle-button:active {
+  transform: scale(0.97);
+}
+
+.ios-card {
+  border-radius: 16px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ios-container {
+  border-radius: 20px;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-ping-slow {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
